@@ -1,2 +1,2 @@
 # ghostbudget
-Privacy Policy &amp;amp; Terms of Service for GhostBudget
+Privacy Policy & Terms of Service for GhostBudget
