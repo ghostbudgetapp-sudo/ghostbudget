@@ -1,120 +1,81 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>GhostBudget - Privacy Policy & Terms</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — GhostBudget</title>
   <style>
     :root {
-      --bg: #0f172a;
-      --card-bg: #1e293b;
-      --text: #e2e8f0;
-      --heading: #f8fafc;
-      --accent: #38bdf8;
-      --border: #334155;
+      color-scheme: dark light;
+      --bg: #0f111a;
+      --surface: #181c29;
+      --text: #f4f6fb;
+      --muted: #a6b0c3;
+      --accent: #00e676;
+      --border: #272d40;
     }
     body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
       margin: 0;
-      padding: 40px 20px;
-    }
-    .container {
-      max-width: 780px;
-      margin: 0 auto;
-      background-color: var(--card-bg);
-      padding: 40px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
-    }
-    h1 {
-      color: var(--heading);
-      font-size: 2rem;
-      margin-top: 0;
-      border-bottom: 2px solid var(--border);
-      padding-bottom: 12px;
-    }
-    h2 {
-      color: var(--accent);
-      font-size: 1.3rem;
-      margin-top: 32px;
-    }
-    p, li {
+      padding: 32px 16px;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+      background: var(--bg);
       color: var(--text);
-      font-size: 0.98rem;
+      line-height: 1.65;
     }
-    ul {
-      padding-left: 20px;
+    main {
+      max-width: 760px;
+      margin: 0 auto;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 32px;
     }
-    .badge {
-      display: inline-block;
-      background-color: rgba(56, 189, 248, 0.15);
-      color: var(--accent);
-      padding: 4px 10px;
-      border-radius: 6px;
-      font-size: 0.85rem;
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-    .footer {
-      margin-top: 40px;
-      border-top: 1px solid var(--border);
-      padding-top: 20px;
-      font-size: 0.85rem;
-      color: #94a3b8;
-      text-align: center;
-    }
+    h1 { margin-top: 0; font-size: 1.9rem; }
+    h2 { margin-top: 1.8rem; font-size: 1.2rem; color: var(--accent); }
+    p, li { color: var(--muted); }
+    strong { color: var(--text); }
+    .meta { font-size: 0.9rem; color: var(--muted); margin-bottom: 1.5rem; }
   </style>
 </head>
 <body>
-
-  <div class="container">
-    <h1>GhostBudget</h1>
-    <div class="badge">100% Offline • Zero Data Collection • Standalone Utility</div>
-    <p><em>Effective Date: November 14, 2026 | Published by STS Software</em></p>
-
-    <h2>1. Privacy Policy</h2>
-    <p>STS Software built <strong>GhostBudget: Offline Finance</strong> as a privacy-first, standalone budgeting utility. We believe your personal financial data belongs solely to you.</p>
-
-    <p><strong>Zero Data Collection & Storage:</strong></p>
+  <main>
+    <h1>Privacy Policy for GhostBudget</h1>
+    <p class="meta">Effective Date: November 16, 2026 &bull; Package: <code>com.ghostbudget.app</code></p>
+    <p>
+      <strong>GhostBudget</strong> is an offline-first personal budgeting application. Your financial data
+      belongs solely to you and stays on your device.
+    </p>
+    <h2>1. Information We Collect</h2>
+    <p>
+      <strong>We do not collect, transmit, sell, or share any personal or financial data.</strong>
+      All budgets, spending buckets, transactions, savings goals, and categorization rules you enter
+      are stored locally on your device using Android's local database storage (Room / SQLite) and
+      SharedPreferences.
+    </p>
+    <h2>2. Backups, Exports &amp; Android Auto Backup</h2>
     <ul>
-      <li>GhostBudget does not collect, track, log, or transmit any personally identifiable information (PII) or financial details.</li>
-      <li>The application operates completely offline and requires zero network or internet permissions.</li>
-      <li>All transactions, budget limits, categories, and settings are stored locally on your device using an encrypted SQLite database.</li>
-      <li>We do not operate servers, cloud sync, analytics, or background telemetry.</li>
+      <li><strong>Manual Exports:</strong> You may optionally export or share your budget data (such as JSON or text snapshots) using the Android system share sheet. Those files are only sent to the destination or app you explicitly choose.</li>
+      <li><strong>Android Backup:</strong> Standard Android OS backup (<code>android:allowBackup="true"</code>) may back up local app data to your personal Google account if enabled in your device settings, governed by Google's privacy policy.</li>
     </ul>
-
-    <p><strong>Third-Party Access:</strong></p>
+    <h2>3. Third-Party Services, Ads &amp; Analytics</h2>
+    <p>
+      GhostBudget contains <strong>no advertisements</strong>, <strong>no third-party analytics SDKs</strong>,
+      and <strong>no tracking or crash-reporting libraries</strong> that transmit user data off your device.
+    </p>
+    <h2>4. Permissions</h2>
     <ul>
-      <li>No third-party SDKs, advertising frameworks, or trackers are embedded within the application.</li>
-      <li>Because no data is transmitted off your device, no third party has access to your financial records.</li>
+      <li><strong>Network / Internet Permission:</strong> Declared in the app manifest for optional future connectivity features; the current release operates locally on-device and does not upload your financial records to any server.</li>
     </ul>
-
-    <p><strong>Data Backups & Control:</strong></p>
-    <ul>
-      <li>You maintain total ownership of your data. You can export manual backup snapshots or clear your local database at any time from within the application settings.</li>
-      <li>If you uninstall the application without exporting a backup, your local data will be deleted in accordance with Android operating system standards.</li>
-    </ul>
-
-    <h2>2. Terms of Service & Software License</h2>
-    <p>By downloading or using GhostBudget, you agree to the following terms:</p>
-    <ul>
-      <li><strong>License Grant:</strong> STS Software grants you a personal, perpetual, non-exclusive license to use GhostBudget on your Android devices associated with your Google Play purchase.</li>
-      <li><strong>No Financial Advice:</strong> GhostBudget is an informational budgeting and pace calculator utility. It does not provide certified financial, accounting, investment, or legal advice.</li>
-      <li><strong>"As-Is" Provision:</strong> The software is provided "AS IS" and "AS AVAILABLE" without warranties of any kind, either express or implied. STS Software is not liable for data loss resulting from device malfunction, OS upgrades, or lack of user-initiated backups.</li>
-    </ul>
-
-    <h2>3. Contact Information</h2>
-    <p>If you have any questions, feedback, or support inquiries regarding GhostBudget or this policy, please contact STS Software at:</p>
-    <p><strong>Email:</strong> <a href="mailto:ghostbudget.app@gmail.com" style="color: var(--accent);">ghostbudget.app@gmail.com</a></p>
-
-    <div class="footer">
-      &copy; 2026 STS Software. All rights reserved.
-    </div>
-  </div>
-
+    <h2>5. Data Deletion</h2>
+    <p>
+      Because all data is stored locally on your device, you can delete your data at any time by
+      clearing the app's storage in Android Settings or uninstalling GhostBudget.
+    </p>
+    <h2>6. Contact</h2>
+    <p>
+      If you have questions about this Privacy Policy, please contact the developer at the support
+      email listed on the GhostBudget Google Play Store page.
+    </p>
+  </main>
 </body>
 </html>
